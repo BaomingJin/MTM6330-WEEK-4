@@ -11,11 +11,11 @@ gulp.task('sass', function () {
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 gulp.task('sass',function(){
-  return GULP
+  return gulp
   .src('scss/**/*.scss')
   pipe(sass())
   .pipe(gulp.dest('css'))
 })
-GULP.task('default',function(){
+gulp.task('default',function(){
   gulp.watch('scss/**/*.scss',gulp.series('sass'))
 })
